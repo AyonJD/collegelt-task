@@ -7,7 +7,7 @@ const Home = () => {
         {/* <!-- head --> */}
         <thead>
           <tr>
-            <th>Serial</th>
+            <th className='col-span-1'>Serial</th>
             <th>Name</th>
             <th>Gender</th>
             <th>City</th>
