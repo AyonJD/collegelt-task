@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useUsers from '../Hooks/useUsers';
 import SingleUserRow from './SingleUserRow';
 
 const Home = () => {
   const [users, setUsers] = useUsers();
-  // console.log(users.results);
+  const navigate = useNavigate();
+  
+  const handleUserClick = (id) => {
+    navigate(`/${id}`);
+  }
   return (
     <div className="overflow-x-auto container mx-auto">
       <table className="table w-full">
@@ -23,7 +28,7 @@ const Home = () => {
 
 
           {
-            users?.results?.map((user, index) => <SingleUserRow user={user} key={index} serial={index} />)
+            users?.results?.map((user, index) => <SingleUserRow handleUserClick={handleUserClick} user={user} key={index} serial={index} />)
           }
 
         </tbody>
