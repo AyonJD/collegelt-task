@@ -6,7 +6,10 @@ import SingleUserRow from './SingleUserRow';
 const Home = () => {
   const [users, setUsers] = useUsers();
   const navigate = useNavigate();
-  
+
+  // console.log(users);
+
+  // Handle dynamic route
   const handleUserClick = (id) => {
     navigate(`/${id}`);
   }
@@ -28,7 +31,7 @@ const Home = () => {
 
 
           {
-            users?.results?.map((user, index) => <SingleUserRow handleUserClick={handleUserClick} user={user} key={index} serial={index} />)
+            users?.map((user, index) => <SingleUserRow handleUserClick={handleUserClick} user={user} key={index} serial={index} />)
           }
 
         </tbody>
