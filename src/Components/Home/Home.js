@@ -1,6 +1,10 @@
 import React from 'react';
+import useUsers from '../Hooks/useUsers';
+import SingleUserRow from './SingleUserRow';
 
 const Home = () => {
+  const [users, setUsers] = useUsers();
+  // console.log(users.results);
   return (
     <div className="overflow-x-auto container mx-auto">
       <table className="table w-full">
@@ -16,15 +20,12 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="hover">
-            <th>1</th>
-            <td>Cy Ganderton</td>
-            <td>Quality</td>
-            <td>Blue</td>
-            <td>Blue</td>
-            <td>Blue</td>
-          </tr>
-          
+
+
+          {
+            users?.results?.map((user, index) => <SingleUserRow user={user} key={index} serial={index} />)
+          }
+
         </tbody>
       </table>
     </div>
