@@ -26,7 +26,7 @@ const SingleuserInfo = () => {
         <>
             {
                 loading ? <Spinner /> :
-                    <div className='flex items-center justify-center h-[100vh] bg-[#E0E5EC]'>
+                    <div className='flex items-center justify-center py-10 md:py-0 h-[100vh] bg-[#E0E5EC]'>
                         <div className="card w-96 text-center shadow--raised bg-[#E0E5EC]">
                             <figure className='pt-5'><img className='rounded-full p-2 image-shadow' src={picture?.large} alt="Shoes" /></figure>
                             <div className="card-body">
