@@ -23,9 +23,9 @@ const Home = () => {
     navigate(`/${id}`);
   }
   return (
-    <div className='bg-[#0F1729]'>
+    <div className='bg-[#bcc0c9]'>
       <div className="overflow-x-auto container mx-auto pb-20">
-        <h1 className='text-center text-white text-2xl md:text-4xl mt-8 mb-5 px-2 md:px-0'>CollegeIt Users Info of {new Date().getFullYear()}</h1>
+        <h1 className='text-center bg-white text-shadow text-2xl md:text-4xl mt-8 mb-5 px-2 md:px-0'>CollegeIt Users Info of {new Date().getFullYear()}</h1>
         {
           loading ? <Spinner /> :
             <table className="table w-full">
