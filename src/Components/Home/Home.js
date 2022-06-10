@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useUsers from '../Hooks/useUsers';
 import Spinner from '../Spinner/Spinner';
 import SingleUserRow from './SingleUserRow';
 

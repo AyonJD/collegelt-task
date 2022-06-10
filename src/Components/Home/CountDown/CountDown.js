@@ -46,11 +46,25 @@ const Timer = ({ deadline }) => {
 
     return (
         <div>
-            <p>CONTDOWN</p>
-            <span>{countdown.days} days</span>
-            <span>{countdown.hours} hours</span>
-            <span>{countdown.minutes} minutes</span>
-            <span>{countdown.seconds} seconds</span>
+            <p className="text-md font-medium">Upcoming Birthday in-</p>
+            <div className="flex justify-around mt-2">
+                <div className="days">
+                    <button className="btn button-shadow">{countdown.days}</button>
+                    <h1 className="text-md font-bold">Days</h1>
+                </div>
+                <div className="hour">
+                    <button className="btn button-shadow">{countdown.hours}</button>
+                    <h1 className="text-md font-bold">Hours</h1>
+                </div>
+                <div className="minute">
+                    <button className="btn button-shadow">{countdown.minutes}</button>
+                    <h1 className="text-md font-bold">Minutes</h1>
+                </div>
+                <div className="second">
+                    <button className="btn button-shadow">{countdown.seconds}</button>
+                    <h1 className="text-md font-bold">Seconds</h1>
+                </div>
+            </div>
         </div>
     );
 };
